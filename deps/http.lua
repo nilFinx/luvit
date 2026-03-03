@@ -158,7 +158,7 @@ function ServerResponse:flushHeaders()
     end
   end
   head.code = statusCode
-  head.reason = self.statusReason
+  head.reason = self.statusMessage
   local h = self.encode(head)
   self.socket:write(h)
 end
